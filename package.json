@@ -1,0 +1,34 @@
+{
+  "name": "ollama-gui",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "next:dev": "next dev --turbopack",
+    "next:build": "next build",
+    "next:start": "next start",
+    "next:lint": "next lint",
+    "electron:build": "tsc ./src-electron/lib/main.ts --outDir ./dist --watch",
+    "electron:start": "electron ./dist/main.js",
+    "dev": "concurrently \"npm run next:dev\" \"npm run electron:build\" \"npm run electron:start\"",
+    "lint": "biome lint",
+    "format": "biome format",
+    "check": "biome check"
+  },
+  "dependencies": {
+    "next": "15.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^9.1.2",
+    "electron": "^34.3.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@10.2.1+sha512.398035c7bd696d0ba0b10a688ed558285329d27ea994804a52bad9167d8e3a72bcb993f9699585d3ca25779ac64949ef422757a6c31102c12ab932e5cbe5cc92"
+}
