@@ -1,0 +1,44 @@
+.configurationBody {
+  position: relative;
+}
+
+.configurationBody input[name='open-configuration-dialog'] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.configurationDialog {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 45px 10px;
+  display: none;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+}
+
+.configurationDialog section {
+  background: var(--color-background-100);
+  border-radius: var(--border-radius-md);
+  width: 100%;
+  z-index: 100;
+  padding: 10px 15px;
+}
+
+.configurationDialog input[name='open-configuration-dialog'] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.configurationBody:has(input:checked) ~ .configurationDialog {
+  display: flex;
+}
