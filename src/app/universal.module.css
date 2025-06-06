@@ -3,3 +3,16 @@
   font-weight: 600;
   font-size: var(--text-size-lg);
 }
+
+.regularButton {
+  background-color: var(--color-background-200);
+  border-radius: var(--border-radius-sm);
+  padding: 10px;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.regularButton:hover {
+  transform: scale(0.95);
+  background-color: var(--color-background-300);
+}

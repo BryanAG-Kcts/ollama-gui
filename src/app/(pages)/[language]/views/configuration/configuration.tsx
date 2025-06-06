@@ -2,7 +2,8 @@ import X from '@/../public/icons/x.svg'
 import universalStyles from '@/app/universal.module.css'
 import { I18n } from '@/i18n/i18n'
 import type { ReactNode } from 'react'
-import configurationStyles from './configuration.module.css'
+import { ConfigBody } from './components/config-body/config-body'
+import configurationStyles from './styles.module.css'
 
 interface Props {
   children: ReactNode
@@ -28,7 +29,7 @@ export function Configuration({ children }: Props) {
               {configuration.title}
             </h2>
 
-            <div>
+            <div className='relative'>
               <X />
 
               <input
@@ -37,6 +38,8 @@ export function Configuration({ children }: Props) {
               />
             </div>
           </div>
+
+          <ConfigBody />
         </section>
 
         <input

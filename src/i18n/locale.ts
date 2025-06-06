@@ -1,4 +1,4 @@
-import { Configuration } from './base/configuration'
+import { Configuration } from './base/configuration/configuration'
 
 export class Locale {
   readonly configuration: Configuration
